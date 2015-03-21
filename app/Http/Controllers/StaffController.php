@@ -23,7 +23,10 @@ class StaffController extends Controller {
     public function getShow($mail)
     {
         $staff = DB::select('select * from staff_master where mail = ?', [$mail])[0];
-        $staff_detail = DB::select('select * from staff_detail where mail = ? order by utime', [$mail]);
+        $staff_detail = DB::select('select * from staff_detail where mail = ? order by utime desc', [$mail]);
+        if (!$staff->imgfile) {
+            $staff->imgfile = "/image/photo.jpg";
+        }
         return view('staff.show')->with(compact('staff_detail'))->with(compact('staff'));
     }
 }

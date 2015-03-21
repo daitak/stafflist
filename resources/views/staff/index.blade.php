@@ -25,6 +25,8 @@
           <tr>
               <th>Mail</th>
               <th>Name</th>
+              <th>Enter At</th>
+              <th>Degree</th>
               <th></th>
           </tr>
           </thead>
@@ -33,6 +35,8 @@
               <tr>
                    <td>{{{ $staff->mail }}}</td>
                    <td>{{{ $staff->l_name .' '. $staff->f_name }}}</td>
+                   <td>{{{ $staff->enter_at }}}</td>
+                   <td>{{{ $staff->degree }}}</td>
                    <td><a href="/staff/show/{{{ $staff->mail }}}" class="btn btn-default btn-xs">Detail</a></td>
               </tr>
                @endforeach

@@ -1,16 +1,25 @@
 @extends('app')
   
   @section('content')
-      <h2 class="page-header">Staff Detail</h2>
+      <h2 class="page-header">
+          <a href="{{ Request::header('referer') }}" class="btn btn-default btn-xs">Back</a>
+          Staff Detail
+      </h2>
 
-      <div class="text-left">
-         <a href="{{ Request::header('referer') }}" class="btn btn-default btn-xs">Back</a>
+      <div class="form-inline text-center lead">
+          <div class="col-md-4">
+              <div class="imgfile">
+                   <img src="{{{ $staff->imgfile }}}" title="imgfile" >
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="name">{{{ $staff->l_name.' '.$staff->f_name }}}</div>
+              <div class="mail">Mail: {{{ $staff->mail }}}</div>
+              <div class="enter_at">Enter At: {{{ $staff->enter_at }}}</div>
+              <div class="degree">Degree: {{{ $staff->degree }}}</div>
+          </div>
       </div>
 
-      <div class="text-center">
-          <div class="name">{{{ $staff->l_name.' '.$staff->f_name }}}</div>
-          <div class="mail">{{{ $staff->mail }}}</div>
-      </div>
 
       <table class="table table-striped table-hover">
           <thead>
