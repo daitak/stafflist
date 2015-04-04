@@ -26,6 +26,7 @@
           <tr>
               <th>Utime</th>
               <th>Department</th>
+              <th>Section</th>
               <th>Rank</th>
               <th>Tel</th>
           </tr>
@@ -35,6 +36,7 @@
               <tr>
                    <td>{{{ $staff_detail->utime }}}</td>
                    <td>{{{ $staff_detail->department }}}</td>
+                   <td>{{{ $staff_detail->section }}}</td>
                    <td>{{{ $staff_detail->rank }}}</td>
                    <td>{{{ $staff_detail->tel }}}</td>
               </tr>
