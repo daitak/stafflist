@@ -9,7 +9,7 @@
       <div class="form-inline text-center lead">
           <div class="col-md-4">
               <div class="imgfile">
-                   <img src="{{{ $staff->imgfile }}}" title="imgfile" >
+                   <img src="{{{ $staff->imgfile }}}" title="imgfile" style="max-width:400px">
               </div>
           </div>
           <div class="col-md-4">
